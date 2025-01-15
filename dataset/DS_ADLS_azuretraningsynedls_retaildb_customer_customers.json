@@ -1,0 +1,33 @@
+{
+	"name": "DS_ADLS_azuretraningsynedls_retaildb_customer_customers",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_azuretraningsynedls",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "my-first-dataset"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "customers.csv",
+				"folderPath": "customer",
+				"fileSystem": "retaildb"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "\"customer_id\"|\"customer_name\"|\"dob\"|\"email\"|\"gender\"|\"country\"|\"region\"|\"city\"|\"asset\"|\"marital_status\"",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

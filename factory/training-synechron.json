@@ -1,0 +1,9 @@
+{
+	"name": "training-synechron",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f8ceb521-ce1f-4bdc-ab10-be8b20b93c42",
+		"tenantId": "a2a56ead-b126-4304-9e53-386c1ce24e9b"
+	}
+}

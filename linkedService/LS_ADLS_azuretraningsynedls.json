@@ -1,0 +1,12 @@
+{
+	"name": "LS_ADLS_azuretraningsynedls",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://azuretraningsynedls.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEQzN0FBRUI3LUI3QUQtNEEzNS04MUE2LTVDREQ1OUI1OEQxM18xZTYxM2E2Yi1hNmFhLTQyYWItYmY5YS0wYTUyMzk5NGQzMjQiDQp9"
+		}
+	}
+}
