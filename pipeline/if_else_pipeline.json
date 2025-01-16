@@ -1,0 +1,73 @@
+{
+	"name": "if_else_pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "If Condition1",
+				"type": "IfCondition",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@contains(pipeline().parameters.listOfCities,pipeline().parameters.city)",
+						"type": "Expression"
+					},
+					"ifFalseActivities": [
+						{
+							"name": "Set variable2",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "doesCityExists",
+								"value": false
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "doesCityExists",
+								"value": true
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"listOfCities": {
+				"type": "array",
+				"defaultValue": [
+					"New York",
+					"London"
+				]
+			},
+			"city": {
+				"type": "string",
+				"defaultValue": "London"
+			}
+		},
+		"variables": {
+			"doesCityExists": {
+				"type": "Boolean"
+			}
+		},
+		"folder": {
+			"name": "Control_Flow_Activities"
+		},
+		"annotations": []
+	}
+}
