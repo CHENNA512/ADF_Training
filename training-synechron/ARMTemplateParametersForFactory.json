@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "training-synechron"
+		},
+		"LS_ADLS_azuretraningsynedls_accountKey": {
+			"value": ""
+		},
+		"LS_ASQL_retaildb_password": {
+			"value": ""
+		},
+		"LS_ADLS_azuretraningsynedls_properties_typeProperties_url": {
+			"value": "https://azuretraningsynedls.dfs.core.windows.net/"
+		},
+		"LS_ASQL_retaildb_properties_typeProperties_server": {
+			"value": "sandboxtraining.database.windows.net"
+		},
+		"LS_ASQL_retaildb_properties_typeProperties_database": {
+			"value": "retaildb"
+		},
+		"LS_ASQL_retaildb_properties_typeProperties_userName": {
+			"value": "rootadmin"
+		}
+	}
+}
