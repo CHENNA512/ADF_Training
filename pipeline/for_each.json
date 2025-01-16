@@ -1,0 +1,80 @@
+{
+	"name": "for_each",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.ProgrammingLanuage",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Append variable1",
+							"type": "AppendVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "temp",
+								"value": {
+									"value": "@concat('Language=',item())",
+									"type": "Expression"
+								}
+							}
+						}
+					]
+				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "finalList",
+					"value": {
+						"value": "@variables('temp')",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"ProgrammingLanuage": {
+				"type": "array",
+				"defaultValue": [
+					"C",
+					"C++",
+					"Java"
+				]
+			}
+		},
+		"variables": {
+			"temp": {
+				"type": "Array"
+			},
+			"finalList": {
+				"type": "Array"
+			}
+		},
+		"folder": {
+			"name": "Control_Flow_Activities"
+		},
+		"annotations": []
+	}
+}

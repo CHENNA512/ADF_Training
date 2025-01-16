@@ -17,7 +17,7 @@
 				"folderPath": "customer",
 				"fileSystem": "retaildb"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": "|",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
