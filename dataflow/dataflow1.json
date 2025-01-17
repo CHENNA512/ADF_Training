@@ -79,7 +79,11 @@
 				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          name = Name,",
+				"          departmentName = DepartmentName",
+				"     )) ~> sink1"
 			]
 		}
 	}
