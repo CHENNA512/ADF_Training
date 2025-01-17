@@ -55,7 +55,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> departmentsource",
-				"employeesource, departmentsource join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
+				"employeesource, departmentsource join(employeesource@DepartmentID == departmentsource@DepartmentID,",
 				"     joinType:'inner',",
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
