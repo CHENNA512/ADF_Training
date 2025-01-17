@@ -1,0 +1,28 @@
+{
+	"name": "DS_ASQL_output",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ASQL_retaildb",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "my-first-dataset"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "name",
+				"type": "varchar"
+			},
+			{
+				"name": "departmentName",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "output"
+		}
+	}
+}
